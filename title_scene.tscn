@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://dccjsmkgnyvve"]
+
+[ext_resource type="Script" uid="uid://dp3ummpwr2hf7" path="res://title_scene.gd" id="1_wkkv4"]
+
+[node name="TitleScene" type="Control" unique_id=790944878]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wkkv4")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1582738578]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -627.5
+offset_top = -380.0
+offset_right = 627.5
+offset_bottom = 380.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.30938512, 0.30938518, 0.30938515, 1)
+
+[node name="Label" type="Label" parent="." unique_id=647103512]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -326.0
+offset_top = -139.5
+offset_right = 326.0
+offset_bottom = 139.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 100
+text = "유물 카드 게임
+"
+
+[node name="PlayButton" type="Button" parent="." unique_id=2013159698]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.5
+offset_top = 24.0
+offset_right = 64.5
+offset_bottom = 101.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "PLAY"
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_button_pressed"]

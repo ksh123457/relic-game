@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://bfhu6eltiy2jy"]
+
+[ext_resource type="Script" uid="uid://c3foo4setlgtf" path="res://player.gd" id="1_tyd4p"]
+[ext_resource type="Script" uid="uid://cqslapkjjgdg8" path="res://main_lobby.gd" id="1_wtbdl"]
+[ext_resource type="Texture2D" uid="uid://1gk21x2k8mjv" path="res://human.png" id="2_wtbdl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l0s72"]
+size = Vector2(239, 539)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tyd4p"]
+size = Vector2(138, 260)
+
+[node name="MainLobby" type="Node2D" unique_id=670532121]
+script = ExtResource("1_wtbdl")
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1872531943]
+position = Vector2(561, 508)
+scale = Vector2(0.3, 0.3)
+script = ExtResource("1_tyd4p")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=2069980300]
+texture = ExtResource("2_wtbdl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1049061356]
+position = Vector2(-1.5, 61.5)
+shape = SubResource("RectangleShape2D_l0s72")
+
+[node name="Door1" type="Area2D" parent="." unique_id=196673474]
+position = Vector2(184, 66)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door1" unique_id=561416957]
+position = Vector2(59, 120)
+shape = SubResource("RectangleShape2D_tyd4p")
+
+[node name="ColorRect" type="ColorRect" parent="Door1" unique_id=438987777]
+offset_right = 118.0
+offset_bottom = 242.0
+
+[node name="Door2" type="Area2D" parent="." unique_id=2028093359]
+position = Vector2(511, 72)
+metadata/_edit_group_ = true
+
+[node name="ColorRect" type="ColorRect" parent="Door2" unique_id=1006777497]
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 119.0
+offset_bottom = 243.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door2" unique_id=1138009837]
+position = Vector2(59, 120)
+shape = SubResource("RectangleShape2D_tyd4p")
+
+[node name="Door3" type="Area2D" parent="." unique_id=826682117]
+position = Vector2(851, 75)
+
+[node name="ColorRect" type="ColorRect" parent="Door3" unique_id=134521558]
+offset_right = 118.0
+offset_bottom = 242.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door3" unique_id=50693909]
+position = Vector2(59, 120)
+shape = SubResource("RectangleShape2D_tyd4p")
+
+[node name="Gallery" type="Button" parent="." unique_id=944276100]
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 35.0
+offset_bottom = 36.0
+theme_override_font_sizes/font_size = 25
+text = "🏛"
+
+[connection signal="body_entered" from="Door1" to="." method="_on_door_1_body_entered"]
+[connection signal="body_entered" from="Door2" to="." method="_on_door_2_body_entered"]
+[connection signal="body_entered" from="Door3" to="." method="_on_door_3_body_entered"]
+[connection signal="pressed" from="Gallery" to="." method="_on_gallery_pressed"]

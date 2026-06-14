@@ -1,0 +1,211 @@
+[gd_scene format=3 uid="uid://dhr1wxp33v0ud"]
+
+[ext_resource type="Script" uid="uid://badaybf5ohj1b" path="res://game_1_match.gd" id="1_nrpc5"]
+
+[node name="Game1Match" type="Control" unique_id=144015974]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nrpc5")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=667947568]
+layout_mode = 0
+offset_left = -81.0
+offset_top = -77.0
+offset_right = 1284.0
+offset_bottom = 759.0
+color = Color(0.5632, 0.64, 0.6336, 1)
+
+[node name="QuestionCard" type="TextureRect" parent="." unique_id=1034337955]
+modulate = Color(7.0600886, 13.539555, 11.14497, 1)
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -457.00006
+offset_top = -100.5
+offset_right = -223.66669
+offset_bottom = 100.5
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.9, 0.9)
+expand_mode = 1
+stretch_mode = 3
+
+[node name="QuestionLabel" type="Label" parent="." unique_id=1041758571]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -286.0
+offset_top = -68.0
+offset_right = -192.0
+offset_bottom = 8.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+
+[node name="ChoiceContainer" type="HBoxContainer" parent="." unique_id=2047242537]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = -398.0
+offset_right = -942.0
+offset_bottom = -158.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(2, 2)
+theme_override_constants/separation = -130
+
+[node name="FeedbackLabel" type="Label" parent="." unique_id=97760396]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -342.0
+offset_top = -107.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ResultOverlay" type="ColorRect" parent="." unique_id=1991527607]
+layout_mode = 0
+offset_left = -86.0
+offset_top = -137.0
+offset_right = 1253.0
+offset_bottom = 815.0
+color = Color(0.585062, 0.585062, 0.5850621, 1)
+
+[node name="ScoreLabel" type="Label" parent="ResultOverlay" unique_id=1778950726]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -142.0
+offset_top = -185.0
+offset_right = 142.0
+offset_bottom = -17.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 75
+text = "점수"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StarLabel" type="Label" parent="ResultOverlay" unique_id=382564430]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -124.0
+offset_top = 23.5
+offset_right = 124.0
+offset_bottom = 93.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "별"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RetryButton" type="Button" parent="ResultOverlay" unique_id=1462183850]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 607.0
+offset_top = 127.0
+offset_right = -599.0
+offset_bottom = 181.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "다시하기"
+
+[node name="LobbyButton" type="Button" parent="ResultOverlay" unique_id=1062742252]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 606.0
+offset_top = 191.0
+offset_right = -600.0
+offset_bottom = 248.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "돌아가기"
+
+[node name="StartOverlay" type="ColorRect" parent="." unique_id=584113128]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -646.5
+offset_top = -415.0
+offset_right = 646.5
+offset_bottom = 415.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.45840502, 0.45840508, 0.45840502, 1)
+
+[node name="Label" type="Label" parent="StartOverlay" unique_id=958675505]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -163.0
+offset_top = -65.0
+offset_right = 163.0
+offset_bottom = 65.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "짝 맞추기 게임"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StartButton" type="Button" parent="StartOverlay" unique_id=703731586]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -69.75
+offset_top = 58.5
+offset_right = 69.75
+offset_bottom = 120.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+text = "게임 시작"
+
+[connection signal="pressed" from="ResultOverlay/RetryButton" to="." method="_on_retry_button_pressed"]
+[connection signal="pressed" from="ResultOverlay/LobbyButton" to="." method="_on_lobby_button_pressed"]
+[connection signal="pressed" from="StartOverlay/StartButton" to="." method="_on_start_button_pressed"]

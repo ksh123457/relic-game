@@ -1,0 +1,133 @@
+[gd_scene format=3 uid="uid://bena0t08tet1q"]
+
+[ext_resource type="Script" uid="uid://de23ebl2t2y6e" path="res://game_2_memory.gd" id="1_jf47o"]
+
+[node name="Game2Memory" type="Control" unique_id=246510743]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jf47o")
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=1185798727]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -181.0
+offset_top = -157.5
+offset_right = 181.0
+offset_bottom = 157.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = -50
+theme_override_constants/v_separation = -50
+columns = 4
+
+[node name="TimerLabel" type="Label" parent="." unique_id=56556508]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -64.0
+offset_right = 64.0
+offset_bottom = 87.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 30
+text = "경과 시간
+"
+
+[node name="ResultOverlay" type="ColorRect" parent="." unique_id=181055956]
+layout_mode = 0
+offset_left = -192.0
+offset_top = -355.0
+offset_right = 1390.0
+offset_bottom = 975.0
+color = Color(0.4922372, 0.49223727, 0.49223727, 1)
+
+[node name="TimeResultLabel" type="Label" parent="ResultOverlay" unique_id=1143437374]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.0
+offset_top = -21.0
+offset_right = 30.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "결과"
+horizontal_alignment = 1
+
+[node name="LobbyButton" type="Button" parent="ResultOverlay" unique_id=588666600]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -74.0
+offset_top = 153.0
+offset_right = 77.0
+offset_bottom = 192.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "돌아가기
+"
+
+[node name="StartOverlay" type="ColorRect" parent="." unique_id=1980487754]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -810.0
+offset_top = -530.0
+offset_right = 810.0
+offset_bottom = 530.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.41981313, 0.41981313, 0.4198131, 1)
+
+[node name="Label" type="Label" parent="StartOverlay" unique_id=902460286]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -131.5
+offset_top = -35.0
+offset_right = 131.5
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "기억력 게임"
+
+[node name="StartButton" type="Button" parent="StartOverlay" unique_id=71350702]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = 70.0
+offset_right = 75.0
+offset_bottom = 154.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "게임 시작"
+
+[connection signal="pressed" from="ResultOverlay/LobbyButton" to="." method="_on_lobby_button_pressed"]
+[connection signal="pressed" from="StartOverlay/StartButton" to="." method="_on_start_button_pressed"]
